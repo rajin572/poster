@@ -3,15 +3,18 @@ import logo from "../../../assets/logo.png";
 const Footer = () => {
   return (
     <div className="mt-28">
-      <footer className="border-t-2 border-[#FA931C]">
+      <footer className="border-t-2 border-[#0085B8]">
         <div className="w-[95%] md:w-[90%] mx-auto pt-20 ">
           <div
             className="flex justify-between items-center flex-col md:flex-row "
             id="footer"
           >
             <div className="max-w-lg">
-              <div>
-                <img src={logo} className="w-28 h-6" alt="t" />
+              <div className="flex items-center">
+                <img src={logo} className="w-12 h-6" alt="t" />
+                <h1 className="text-[#01ACE4] text-3xl font-semibold">
+                  Poster
+                </h1>
               </div>
 
               <p className="w-11/12 leading-loose text-slate-500 text-start mt-4">
@@ -33,7 +36,7 @@ const Footer = () => {
                 <li>Phone: (123) 123-456</li>
                 <li>
                   E-Mail:
-                  <a href="" className="text-[#FA931C] font-medium">
+                  <a href="" className="text-[#0085B8] font-medium">
                     {" "}
                     office@poster.com
                   </a>

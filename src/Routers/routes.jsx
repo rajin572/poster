@@ -1,11 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../components/layout/MainLayout";
 import Home from "../components/pages/HomePage/Home";
-import Blog from "../components/pages/BlogPage/Blog";
 import SignLayout from "../components/layout/SignLayout";
 import SignIn from "../components/pages/SignInPage/SignIn";
 import SignUp from "../components/pages/SignUpPage/SignUp";
 import NotFound from "../components/pages/NotFoundPage/NotFound";
+import Article from "../components/pages/ArticlePage/Article";
 
 const router = createBrowserRouter([
   {
@@ -17,8 +17,8 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/blog",
-        element: <Blog />,
+        path: "/article",
+        element: <Article />,
       },
     ],
   },
