@@ -5,6 +5,8 @@ import logo from "../../../assets/logo.png";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const user = false;
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
     <div className="w-full bg-[#ffffff] text-[#183B56] py-2 px-5 md:px-14 border-b-2 border-[#0085B8]">
@@ -27,24 +29,24 @@ const Navbar = () => {
             >
               <Link to="/article">Article</Link>
             </li>
-            <li
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="px-5 py-2 me-2"
-            >
-              <Link to="/about">About Us</Link>
-            </li>
-            <li
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="px-5 py-2 me-2"
-            >
-              <Link to="/contact">Contact</Link>
-            </li>
-            <li
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="px-5 py-2 me-2"
-            >
-              <Link to="/auth/signin">Sign In</Link>
-            </li>
+
+            {/* //* sign in and sign out */}
+            {user ? (
+              <li
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="px-5 py-2 me-2"
+              >
+                <p>Sign Out</p>
+              </li>
+            ) : (
+              <li
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="px-5 py-2 me-2"
+              >
+                <Link to="/auth/signin">Sign In</Link>
+              </li>
+            )}
+            {/* //* sign in and sign out */}
           </ul>
         </div>
         <div className="text-2xl lg:hidden">

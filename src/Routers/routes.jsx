@@ -6,6 +6,8 @@ import SignIn from "../components/pages/SignInPage/SignIn";
 import SignUp from "../components/pages/SignUpPage/SignUp";
 import NotFound from "../components/pages/NotFoundPage/NotFound";
 import Article from "../components/pages/ArticlePage/Article";
+import ArticleDetails from "../components/pages/ArticleDetailsPage/ArticleDetails";
+import CreatePost from "../components/pages/CreatePostPage/CreatePost";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +21,14 @@ const router = createBrowserRouter([
       {
         path: "/article",
         element: <Article />,
+      },
+      {
+        path: "/article/:id",
+        element: <ArticleDetails />,
+      },
+      {
+        path: "/create-post",
+        element: <CreatePost />,
       },
     ],
   },
